@@ -13,7 +13,7 @@
     <label for="guessAuthor">Guess the Author </label>
     <input type ="text" id="guessAuthor" name="guessAuthor" autofocus> <br>
 
-    <input type="button" onclick="checkAuthor()" value="Check the guess">
+    <input type="button" onclick="checkAuthor()" value="Check the guess" id="btn">
 </form>
 
 
@@ -33,13 +33,24 @@ function checkAuthor (){
         alert('You got it right')
         out.innerHTML="Results: Good-"+good+", Oops-"+oops
     } else {
-        oops++
+        oops+=1
         alert('Sorry')
         out.innerHTML="Results: Good-"+good+",Oops-"+oops
+    }
+    if(oops==7)
+    {
+        GuessesExceeded()
     }
     
 
 }
+function GuessesExceeded()
+    {
+        alert('Sorry,you ran out of guesses')
+        const btn1= document.getElementById("btn")
+        btn1.disabled = true
+
+    }
 </script>
 <hr>
 
