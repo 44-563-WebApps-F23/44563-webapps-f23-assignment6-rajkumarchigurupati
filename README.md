@@ -3,6 +3,6 @@
 Introduction to Java Script and DOM
 Hosted at[author](https://44-563-webapps-f23.github.io/44563-webapps-f23-assignment6-rajkumarchigurupati/author.html)
 <br>
-Hosted at[author](https://44-563-webapps-f23.github.io/44563-webapps-f23-assignment6-rajkumarchigurupati/tips.html)
+Hosted at[tips](https://44-563-webapps-f23.github.io/44563-webapps-f23-assignment6-rajkumarchigurupati/tips.html)
 <br>
-Hosted at[author](https://44-563-webapps-f23.github.io/44563-webapps-f23-assignment6-rajkumarchigurupati/cruise.html)
+Hosted at[cruise](https://44-563-webapps-f23.github.io/44563-webapps-f23-assignment6-rajkumarchigurupati/cruise.html)
