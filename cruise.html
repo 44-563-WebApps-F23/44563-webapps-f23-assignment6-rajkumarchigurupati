@@ -34,7 +34,17 @@
 <br>
 <p id="result">Selected Cruise is shown </p>
 
+<br>
+<hr>
+<form>
+    <label for="days">Enter the number of days </label>
+    <input type ="text" id="days" name="days" min=10 max=50 step=2 value="days"> <br>
 
+    <label for="price">Enter price</label>
+    <input type ="text" id="price" name="price"> <br>
+    <br>
+    <input type="button" onclick="updateCruise()" value="Update the cruise">
+</form>
 
 
 
@@ -51,6 +61,16 @@ var my_cruise={shared:"True",breakfast:"True",pool:"True"}
     out.innerHTML=JSON.stringify(my_cruise)
 
     }
+    function updateCruise (){
+    console.log("Getting form values")
+    days = document.getElementById("days").value
+    price = document.getElementById("price").value
+    my_cruise.days = price
+    
+    out = document.getElementById("result")
+    out.innerHTML=JSON.stringify(my_cruise)
+
+}
 
 </script>
 
