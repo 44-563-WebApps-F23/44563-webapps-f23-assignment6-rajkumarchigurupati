@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <title>Cruise Assignment 6</title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" 
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" 
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+
+ </head>
+<body>
+
+<h2>ChigurupatiRajkumar goes on a cruise</h2>
+<form>
+    <input type="checkbox" id="chk1" name="topping1"   
+      value="True">
+    <label for="chk1">Shares Cabin</label></br>
+  
+    <input type="checkbox" id="chk2" name="topping2" 
+       value="True">
+    <label for="chk2">Breakfast</label></br>
+  
+    <input type="checkbox" id="chk3" name="topping3"   
+       value="False">
+    <label for="chk3">Pool Pass</label></br>
+
+    <input  type="button" value="Select a cruise" onclick="selectCruise()">
+</form>
+<br>
+<p id="result">Selected Cruise is shown </p>
+
+
+
+
+
+<script> 
+
+var my_cruise={shared:"True",breakfast:"True",pool:"True"}
+    function selectCruise()
+    {
+    my_cruise={}
+    my_cruise.shared = document.getElementById("chk1").checked
+    my_cruise.breakfast = document.getElementById("chk2").checked
+    my_cruise.pool = document.getElementById("chk3").checked
+    out = document.getElementById("result")
+    out.innerHTML=JSON.stringify(my_cruise)
+
+    }
+
+</script>
+
+</body>
+</html> 
