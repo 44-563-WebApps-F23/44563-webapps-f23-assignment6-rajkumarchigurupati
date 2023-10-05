@@ -41,5 +41,33 @@ function checkAuthor (){
 
 }
 </script>
+<hr>
+
+
+  <img src="chennai.jpg" alt="chennai city" width="100" height="100" onclick="selectImage()" id="img">
+  <script>
+    let useImage = 1
+    function selectImage()
+    {
+      switch(useImage)
+      {
+        case 1:
+          document.getElementById("img").src ="Hyderabad.jpg"
+          useImage+=1
+          break;
+        case 2:
+          document.getElementById("img").src="Rajkot.jpg"
+          useImage+=1
+          break;
+        case 3:
+          document.getElementById("img").src="Chennai.jpg"
+          useImage=1
+          break;
+        default:
+          document.getElementById("img").src="Chennai.jpg"
+      }
+    }
+  </script>
+
 </body>
 </html>
