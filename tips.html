@@ -20,13 +20,16 @@
 <form>
 
       <label for="bv">Enter Base Amount</label>
-      <input type="number" id="bv" name="base" min=10 max=50 step=2 value=50>
+      <input type="number" id="bv" name="base"  value=50>
 
+      <br>
       <label for="tp">Enter the Tip Percent</label>
       <input type="number" id="tp" name="tip_percent" value=15>
 
+      <br>
     <input type="button" value="Show tip" onclick="tips()" id="btn1">
 </form>
+<br>
 <p id="result">Calculation</p>
 
 <script> 
@@ -36,17 +39,17 @@ function tips (){
     bv1 = parseFloat(document.getElementById("bv").value)
     tp1 = parseFloat(document.getElementById("tp").value)
     
-    let toShow=""
+    let myOutput=""
     for(let i=0;i<5;i++)
     {
         const tper = tp1 + i * 4;
         const ctrip = (bv1 * tper) / 100;
-        toShow += `${tper}% is ${ctrip};` ;
+        myOutput += `${ tper}% is ${ctrip };` ;
         
     }
     
     out = document.getElementById("result")
-    out.innerHTML = "Tips are:"+toShow
+    out.innerHTML = "Tips are:"+myOutput
 
 }
 </script>
